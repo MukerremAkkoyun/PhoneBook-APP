@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import List from './List'
+import Form from './Form'
 
 export default class Contacts extends Component {
-
-    state = {
-
-    }
 
 
     render() {
         return (
             <div>
                 <List />
+                <Form />
             </div>
         )
     }
