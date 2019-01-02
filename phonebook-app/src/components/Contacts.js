@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import List from './List'
 
 export default class Contacts extends Component {
 
@@ -11,7 +11,7 @@ export default class Contacts extends Component {
     render() {
         return (
             <div>
-                hey
+                <List />
             </div>
         )
     }
