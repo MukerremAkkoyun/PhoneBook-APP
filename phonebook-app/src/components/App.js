@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import '../App.css';
-
 import Contacts from "./Contacts";
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.addContact =  this.addContact.bind(this);
+  };
+  
 
   state = {
     array: [{
@@ -18,11 +24,20 @@ class App extends Component {
     }]
 };
 
+  addContact(b){
+    const { array } = this.state;
+    array.push(b);
+
+    this.setState({
+      array
+    });
+  }
+
 
   render() {
     return (
       <div className="App">
-        <Contacts  contacts={this.state.array} />
+        <Contacts addContact={ this.addContact }  ccc={ this.state.array } />
       </div>
     );
   }
